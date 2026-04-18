@@ -86,7 +86,7 @@ export function Nav() {
                 type="button"
                 aria-label="Menu"
                 onClick={() => setOpen(true)}
-                className="grid h-9 w-9 place-items-center rounded-full border border-default bg-surface/70 backdrop-blur md:hidden"
+                className="grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-default bg-surface/70 backdrop-blur md:hidden"
               >
                 <Menu size={16} />
               </button>
@@ -118,7 +118,7 @@ export function Nav() {
                   type="button"
                   aria-label="Close"
                   onClick={() => setOpen(false)}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-default"
+                  className="grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-default"
                 >
                   <X size={16} />
                 </button>

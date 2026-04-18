@@ -115,6 +115,7 @@ export default function RootLayout({
         />
       </head>
       <body className="relative min-h-screen font-sans antialiased overflow-x-hidden">
+        <a href="#main" className="skip-link">Skip to main content</a>
         <Providers>{children}</Providers>
         <Noise />
         <Script

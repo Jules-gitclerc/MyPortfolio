@@ -21,16 +21,16 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-5 text-xs text-muted">
-          <Link href={SOCIALS.linkedin} target="_blank" className="hover:text-accent">
+          <Link href={SOCIALS.linkedin} target="_blank" className="cursor-pointer hover:text-accent transition">
             LinkedIn
           </Link>
-          <Link href={SOCIALS.github} target="_blank" className="hover:text-accent">
+          <Link href={SOCIALS.github} target="_blank" className="cursor-pointer hover:text-accent transition">
             GitHub
           </Link>
-          <Link href={SOCIALS.malt} target="_blank" className="hover:text-accent">
+          <Link href={SOCIALS.malt} target="_blank" className="cursor-pointer hover:text-accent transition">
             Malt
           </Link>
-          <Link href={SOCIALS.codepen} target="_blank" className="hover:text-accent">
+          <Link href={SOCIALS.codepen} target="_blank" className="cursor-pointer hover:text-accent transition">
             CodePen
           </Link>
           <span className="text-muted/70">© {year} — {t('footer.rights')}</span>

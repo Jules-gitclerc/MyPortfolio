@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <>
       <Nav />
-      <main className="relative z-10">
+      <main id="main" className="relative z-10">
         <Hero />
         <About />
         <Services />

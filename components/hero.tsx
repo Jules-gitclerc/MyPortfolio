@@ -122,7 +122,7 @@ export function Hero() {
               href={SOCIALS.linkedin}
               target="_blank"
               aria-label="LinkedIn"
-              className="transition hover:text-accent"
+              className="cursor-pointer transition hover:text-accent"
             >
               <Linkedin size={18} />
             </Link>
@@ -130,7 +130,7 @@ export function Hero() {
               href={SOCIALS.github}
               target="_blank"
               aria-label="GitHub"
-              className="transition hover:text-accent"
+              className="cursor-pointer transition hover:text-accent"
             >
               <Github size={18} />
             </Link>
@@ -138,7 +138,7 @@ export function Hero() {
               href={SOCIALS.codepen}
               target="_blank"
               aria-label="CodePen"
-              className="transition hover:text-accent"
+              className="cursor-pointer transition hover:text-accent"
             >
               <Codepen size={18} />
             </Link>

@@ -16,7 +16,7 @@ export function ThemeToggle() {
       type="button"
       aria-label="Toggle theme"
       onClick={() => setTheme(active ? 'light' : 'dark')}
-      className="group relative grid h-9 w-9 place-items-center rounded-full border border-default bg-surface/70 backdrop-blur transition hover:border-accent/50 hover:text-accent"
+      className="group relative grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-default bg-surface/70 backdrop-blur transition hover:border-accent/50 hover:text-accent"
     >
       <Sun
         size={16}
