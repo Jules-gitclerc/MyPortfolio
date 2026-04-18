@@ -12,20 +12,35 @@ import {
 } from 'react';
 import { dict, type Locale } from '@/lib/i18n';
 
+interface Translator {
+  (key: string): string;
+  <T>(key: string): T;
+}
+
 type I18nValue = {
   locale: Locale;
   setLocale: (l: Locale) => void;
-  t: <T = string>(key: string) => T;
+  t: Translator;
 };
 
 const I18nContext = createContext<I18nValue>({
   locale: 'en',
   setLocale: () => {},
-  t: (k) => k as any,
+  t: ((k: string) => k) as Translator,
 });
 
 export function useI18n() {
   return useContext(I18nContext);
+}
+
+function resolve(locale: Locale, key: string): unknown {
+  const parts = key.split('.');
+  let cur: unknown = dict[locale];
+  for (const p of parts) {
+    if (cur == null || typeof cur !== 'object') return key;
+    cur = (cur as Record<string, unknown>)[p];
+  }
+  return cur ?? key;
 }
 
 function I18nProvider({ children }: { children: ReactNode }) {
@@ -51,16 +66,8 @@ function I18nProvider({ children }: { children: ReactNode }) {
     } catch {}
   }, []);
 
-  const t = useCallback(
-    <T,>(key: string): T => {
-      const parts = key.split('.');
-      let cur: any = dict[locale];
-      for (const p of parts) {
-        if (cur == null) break;
-        cur = cur[p];
-      }
-      return (cur ?? key) as T;
-    },
+  const t = useMemo<Translator>(
+    () => ((key: string) => resolve(locale, key)) as Translator,
     [locale]
   );
 
