@@ -30,15 +30,18 @@ export const metadata: Metadata = {
     template: `%s · ${NAME}`,
   },
   description:
-    'Freelance React & Next.js developer. I build fast, accessible and beautifully animated web experiences for startups and SMEs.',
+    'Freelance Flutter mobile developer and full-stack engineer (Java & Node.js). I build mobile apps and robust back-ends for startups and SMEs.',
   keywords: [
     'Jules Clerc',
     'Freelance developer',
-    'React',
-    'Next.js',
+    'Flutter',
+    'Dart',
+    'Mobile developer',
+    'Java',
+    'Spring Boot',
+    'Node.js',
     'TypeScript',
-    'Tailwind CSS',
-    'Front-end developer France',
+    'Full-stack developer France',
   ],
   authors: [{ name: NAME }],
   creator: NAME,
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${NAME} — ${ROLE}`,
     description:
-      'Freelance React & Next.js developer crafting fast, accessible and beautifully animated web experiences.',
+      'Freelance Flutter mobile developer and full-stack engineer (Java & Node.js).',
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['fr_FR'],
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${NAME} — ${ROLE}`,
-    description: 'Freelance React & Next.js developer.',
+    description: 'Freelance Flutter mobile & full-stack developer.',
   },
 };
 
