@@ -1,11 +1,13 @@
 export const SOCIALS = {
-  email: 'hello@julesclerc.dev',
+  email: 'jules.clerc97@gmail.com',
+  phone: '+33 6 18 50 75 97',
   linkedin: 'https://linkedin.com/in/jules-clerc',
-  github: 'https://github.com/Jules-gitclerc',
+  github: 'https://github.com/jules-gitclerc',
   codepen: 'https://codepen.io/Surfy971',
   malt: 'https://www.malt.fr/profile/julesclerc1',
   resume: '/Jules_Clerc_resume.pdf',
 };
 
 export const NAME = 'Jules Clerc';
-export const ROLE = 'Freelance Flutter Mobile & Full-Stack Developer';
+export const ROLE = 'Mobile Flutter & Full-Stack Developer — @Faceel-it (mission Adeo)';
+export const LOCATION = 'Lille & Paris, France';
