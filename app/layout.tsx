@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Providers } from './providers';
 import { Noise } from '@/components/ui/noise';
-import { NAME, ROLE } from '@/lib/constants';
+import { NAME, ROLE, SOCIALS } from '@/lib/constants';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,8 +24,10 @@ const display = Space_Grotesk({
   display: 'swap',
 });
 
+const siteUrl = 'https://julesclerc.dev';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://julesclerc.dev'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${NAME} — ${ROLE}`,
     template: `%s · ${NAME}`,
@@ -59,11 +62,37 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: ['fr_FR'],
     siteName: NAME,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${NAME} — ${ROLE}`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${NAME} — ${ROLE}`,
     description: 'Freelance Flutter mobile & full-stack developer.',
+    images: ['/og-image.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: NAME,
+  url: siteUrl,
+  jobTitle: 'Mobile Flutter & Full-Stack Developer',
+  worksFor: { '@type': 'Organization', name: 'Faceel-it' },
+  email: SOCIALS.email,
+  sameAs: [SOCIALS.linkedin, SOCIALS.github, SOCIALS.malt],
+  knowsAbout: ['Flutter', 'Dart', 'Java', 'Spring Boot', 'React', 'TypeScript', 'Docker', 'Kubernetes'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lille',
+    addressCountry: 'FR',
   },
 };
 
@@ -78,9 +107,21 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${mono.variable} ${display.variable}`}
     >
+      <head>
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="relative min-h-screen font-sans antialiased overflow-x-hidden">
         <Providers>{children}</Providers>
         <Noise />
+        <Script
+          data-goatcounter="https://surfy.goatcounter.com/count"
+          src="//gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

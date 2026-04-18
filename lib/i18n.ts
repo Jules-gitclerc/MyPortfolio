@@ -29,7 +29,7 @@ export const dict = {
       body:
         "I design and ship Flutter apps on iOS and Android — and the Java/Spring services behind them. Currently on mission at Faceel-it for the Adeo group, where the app I work on serves 4,000+ daily users across 100+ retail stores in Europe. I also have a solid React / TypeScript web background (Vinci Group, partner sites). I care about clean architecture, CI/CD pipelines that let you sleep, and products that actually solve a problem.",
       stats: [
-        { k: '3+', v: 'Years building software' },
+        { k: '4+', v: 'Years building software' },
         { k: '4k+', v: 'Daily users on apps I ship' },
         { k: '100+', v: 'Retail stores in Europe' },
       ],
@@ -111,21 +111,75 @@ export const dict = {
       title: 'Side projects & experiments.',
       items: [
         {
-          title: 'Responsive admin dashboard',
-          desc: 'A modern admin layout with dark mode, data viz and responsive tables.',
-          image: '/admin-dashboard.png',
-          live: 'https://codepen.io/Surfy971',
-          code: 'https://codepen.io/Surfy971',
-          tags: ['React', 'Tailwind'],
+          title: 'Congress Trade Tracker',
+          desc: 'Real-time tracker of stock trades disclosed by US Congress members — with scoring, lag analysis and advanced filtering.',
+          live: 'https://copy-trade-ecru.vercel.app/',
+          tags: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vercel'],
         },
         {
-          title: 'Hotel booking dashboard',
-          desc: 'Clean, information-dense hospitality dashboard with revenue analytics.',
-          image: '/hotel-dashboard.png',
-          live: 'https://codepen.io/Surfy971',
-          code: 'https://codepen.io/Surfy971',
-          tags: ['React', 'CSS'],
+          title: 'DocShield',
+          desc: 'AI-resistant document protection tool — transforms files into versions readable by humans but impossible to parse by AI.',
+          live: 'https://securedocs-ai-shield.vercel.app',
+          tags: ['React', 'TypeScript', 'Vite', 'AI Security'],
         },
+        {
+          title: 'GiftLoop',
+          desc: 'Family gift-list PWA — create, share and secretly reserve gifts. Installable, offline-ready, real-time sync.',
+          live: 'https://gift-loop-tawny.vercel.app',
+          tags: ['React', 'TypeScript', 'PWA', 'Vite'],
+        },
+        {
+          title: 'Villa Kazarev',
+          desc: 'Luxury vacation rental showcase in Les Saintes, Guadeloupe — photo gallery, amenities and booking integration.',
+          live: 'https://www.kazarev.fr/',
+          tags: ['React', 'Vite', 'Responsive'],
+        },
+        {
+          title: 'Maison en Corps',
+          desc: 'Showcase website for a wellness massage salon in Lille — service presentation, mobile-first design and online booking.',
+          live: 'https://maisonencorps.fr',
+          tags: ['React', 'CSS', 'Responsive'],
+        },
+      ],
+    },
+    education: {
+      kicker: 'Education',
+      title: 'Where I studied.',
+      items: [
+        {
+          institution: 'Epitech',
+          degree: "Master's degree — IT Expert (Bac+5)",
+          period: '2019 – 2024',
+          location: 'Lille, France',
+        },
+        {
+          institution: 'NSC for Media',
+          degree: 'FinTech Certification — Technology Challenges in the Financial Industry',
+          period: '2022 – 2023',
+          location: 'New York, USA',
+        },
+        {
+          institution: 'Baccalauréat Scientifique',
+          degree: 'Science track (Sports option)',
+          period: '2017',
+          location: 'Guadeloupe, France',
+        },
+      ],
+    },
+    extras: {
+      kicker: 'Beyond code',
+      title: 'Languages & interests.',
+      languagesLabel: 'Languages',
+      interestsLabel: 'Interests',
+      languages: [
+        { name: 'French', level: 'Native' },
+        { name: 'English', level: 'Full professional proficiency' },
+      ],
+      interests: [
+        'Chess (Guadeloupe academic team)',
+        'Automotive',
+        'Scuba diving (150+ dives worldwide)',
+        'Surfing (10 years)',
       ],
     },
     contact: {
@@ -167,7 +221,7 @@ export const dict = {
       body:
         "Je conçois et livre des applications Flutter sur iOS et Android — et les services Java / Spring qui les alimentent. Actuellement en mission chez Faceel-it pour le groupe Adeo, l'app sur laquelle je travaille sert 4 000+ utilisateurs quotidiens dans 100+ magasins en Europe. J'ai aussi une solide expérience React / TypeScript côté web (Vinci Group, sites partenaires). J'aime l'architecture propre, les pipelines CI/CD qui laissent dormir, et les produits qui résolvent un vrai problème.",
       stats: [
-        { k: '3+', v: "Années d'expérience" },
+        { k: '4+', v: "Années d'expérience" },
         { k: '4k+', v: 'Utilisateurs quotidiens' },
         { k: '100+', v: 'Magasins en Europe' },
       ],
@@ -249,21 +303,75 @@ export const dict = {
       title: 'Projets & expérimentations.',
       items: [
         {
-          title: 'Dashboard admin responsive',
-          desc: 'Layout admin moderne, dark mode, dataviz et tableaux responsive.',
-          image: '/admin-dashboard.png',
-          live: 'https://codepen.io/Surfy971',
-          code: 'https://codepen.io/Surfy971',
-          tags: ['React', 'Tailwind'],
+          title: 'Congress Trade Tracker',
+          desc: 'Suivi en temps réel des transactions boursières déclarées par les membres du Congrès américain — scoring, analyse de délai et filtres avancés.',
+          live: 'https://copy-trade-ecru.vercel.app/',
+          tags: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vercel'],
         },
         {
-          title: 'Dashboard hôtelier',
-          desc: "Tableau de bord hôtelier dense en informations avec analyse de revenus.",
-          image: '/hotel-dashboard.png',
-          live: 'https://codepen.io/Surfy971',
-          code: 'https://codepen.io/Surfy971',
-          tags: ['React', 'CSS'],
+          title: 'DocShield',
+          desc: "Outil de protection de documents contre l'IA — transforme les fichiers en versions lisibles par l'humain mais impossibles à parser par l'IA.",
+          live: 'https://securedocs-ai-shield.vercel.app',
+          tags: ['React', 'TypeScript', 'Vite', 'AI Security'],
         },
+        {
+          title: 'GiftLoop',
+          desc: 'PWA familiale de listes de cadeaux — créez, partagez et réservez des cadeaux en toute discrétion. Installable, hors-ligne, sync temps réel.',
+          live: 'https://gift-loop-tawny.vercel.app',
+          tags: ['React', 'TypeScript', 'PWA', 'Vite'],
+        },
+        {
+          title: 'Villa Kazarev',
+          desc: 'Site vitrine pour une villa haut de gamme aux Saintes, Guadeloupe — galerie photos, équipements et intégration réservation.',
+          live: 'https://www.kazarev.fr/',
+          tags: ['React', 'Vite', 'Responsive'],
+        },
+        {
+          title: 'Maison en Corps',
+          desc: 'Site vitrine pour un salon de massage bien-être à Lille — présentation des soins, design mobile-first et prise de rendez-vous.',
+          live: 'https://maisonencorps.fr',
+          tags: ['React', 'CSS', 'Responsive'],
+        },
+      ],
+    },
+    education: {
+      kicker: 'Formation',
+      title: 'Mon parcours académique.',
+      items: [
+        {
+          institution: 'Epitech',
+          degree: "Expert en Technologies de l'Information (Bac+5)",
+          period: '2019 – 2024',
+          location: 'Lille, France',
+        },
+        {
+          institution: 'NSC for Media',
+          degree: 'Certification FinTech — Technology Challenges in the Financial Industry',
+          period: '2022 – 2023',
+          location: 'New York, USA',
+        },
+        {
+          institution: 'Baccalauréat Général Scientifique',
+          degree: 'Option Sport',
+          period: '2017',
+          location: 'Guadeloupe, France',
+        },
+      ],
+    },
+    extras: {
+      kicker: 'Au-delà du code',
+      title: "Langues & centres d'intérêt.",
+      languagesLabel: 'Langues',
+      interestsLabel: "Centres d'intérêt",
+      languages: [
+        { name: 'Français', level: 'Langue maternelle' },
+        { name: 'Anglais', level: 'Capacité professionnelle complète' },
+      ],
+      interests: [
+        'Échecs (équipe académique de Guadeloupe)',
+        'Automobile',
+        'Plongée sous-marine (+150 dans le monde)',
+        'Surf (10 ans)',
       ],
     },
     contact: {

@@ -1,18 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Code2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
 
 type Project = {
   title: string;
   desc: string;
-  image: string;
   live: string;
-  code: string;
   tags: string[];
 };
 
@@ -22,7 +19,7 @@ export function Projects() {
 
   return (
     <Section id="projects" kicker={t('projects.kicker')} title={t('projects.title')} tone="surface">
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((p, i) => (
           <motion.article
             key={p.title}
@@ -30,33 +27,18 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative flex flex-col overflow-hidden rounded-3xl border border-default bg-surface"
+            className="group relative flex flex-col overflow-hidden rounded-3xl border border-default bg-surface transition hover:border-accent/40"
           >
-            <Link
-              href={p.live}
-              target="_blank"
-              className="relative aspect-[16/10] overflow-hidden"
-            >
-              <Image
-                src={p.image}
-                alt={p.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-black opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                <ArrowUpRight size={16} />
-              </div>
-            </Link>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+            />
 
             <div className="flex flex-1 flex-col p-6">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
-                  {p.title}
-                </h3>
-              </div>
-              <p className="mt-2 text-sm text-muted">{p.desc}</p>
+              <h3 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
+                {p.title}
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.desc}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {p.tags.map((tag) => (
                   <span
@@ -67,20 +49,13 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="mt-6 flex items-center gap-3 pt-5 border-t border-default">
+              <div className="mt-6 border-t border-default pt-5">
                 <Link
                   href={p.live}
                   target="_blank"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"
                 >
-                  Live <ArrowUpRight size={14} />
-                </Link>
-                <Link
-                  href={p.code}
-                  target="_blank"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-current"
-                >
-                  <Code2 size={14} /> Code
+                  Visit <ArrowUpRight size={14} />
                 </Link>
               </div>
             </div>

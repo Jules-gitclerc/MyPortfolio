@@ -2,39 +2,41 @@
 
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
+import { techStack } from '@/lib/tech-icons';
 
-const primary = [
-  'Flutter',
-  'Dart',
-  'Riverpod',
-  'Bloc',
-  'Java',
-  'Spring Boot',
-  'Node.js',
-  'React',
-  'TypeScript',
-  'Next.js',
-  'Tailwind',
-  'MongoDB',
-  'Redis',
-  'Firebase',
-  'GCP',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'GitHub Actions',
-  'Fastlane',
-  'REST',
-];
+function TechIcon({ slug, color, name }: { slug: string | null; color: string; name: string }) {
+  if (!slug) {
+    return (
+      <span
+        className="grid h-7 w-7 shrink-0 place-items-center rounded-lg text-[10px] font-bold text-white"
+        style={{ backgroundColor: color }}
+      >
+        {name.slice(0, 2).toUpperCase()}
+      </span>
+    );
+  }
+
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://cdn.simpleicons.org/${slug}/${color.replace('#', '')}`}
+      alt={name}
+      width={22}
+      height={22}
+      loading="lazy"
+      className="shrink-0"
+    />
+  );
+}
 
 export function Stack() {
   const { t } = useI18n();
 
   const row = (
     <div className="marquee-track flex shrink-0 items-center gap-14 px-7 animate-marquee">
-      {primary.map((name) => (
+      {techStack.map(({ name, slug, color }) => (
         <div key={name} className="flex items-center gap-3">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent-grad" />
+          <TechIcon slug={slug} color={color} name={name} />
           <span className="font-display text-2xl font-medium text-muted transition-colors hover:text-current sm:text-3xl">
             {name}
           </span>

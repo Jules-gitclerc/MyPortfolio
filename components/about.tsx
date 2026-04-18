@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
+import { GitHubStats } from './github-stats';
 
 type Stat = { k: string; v: string };
 
@@ -73,6 +74,8 @@ export function About() {
               </motion.div>
             ))}
           </dl>
+
+          <GitHubStats />
         </div>
       </div>
     </Section>
