@@ -1,17 +1,17 @@
 'use client';
 
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Code2, Palette, Gauge } from 'lucide-react';
+import { Smartphone, Server, Layers } from 'lucide-react';
 import { useRef } from 'react';
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
 
 type Service = { title: string; desc: string; tags: string[] };
 
-const icons = [Code2, Palette, Gauge];
+const icons = [Smartphone, Server, Layers];
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
-  const Icon = icons[index] ?? Code2;
+  const Icon = icons[index] ?? Smartphone;
   const ref = useRef<HTMLDivElement>(null);
   const rx = useMotionValue(0);
   const ry = useMotionValue(0);

@@ -8,4 +8,4 @@ export const SOCIALS = {
 };
 
 export const NAME = 'Jules Clerc';
-export const ROLE = 'Freelance React Front-End Developer';
+export const ROLE = 'Freelance Flutter Mobile & Full-Stack Developer';
