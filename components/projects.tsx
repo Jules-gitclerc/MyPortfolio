@@ -1,14 +1,17 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
+import { EASE_OUT_EXPO } from '@/lib/motion';
 
 type Project = {
   title: string;
   desc: string;
+  image: string;
   live: string;
   tags: string[];
 };
@@ -26,13 +29,26 @@ export function Projects() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, delay: i * 0.08, ease: EASE_OUT_EXPO }}
             className="group relative flex flex-col overflow-hidden rounded-3xl border border-default bg-surface transition hover:border-accent/40"
           >
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
-            />
+            <Link
+              href={p.live}
+              target="_blank"
+              className="relative aspect-[16/10] overflow-hidden"
+            >
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-black opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                <ArrowUpRight size={16} />
+              </div>
+            </Link>
 
             <div className="flex flex-1 flex-col p-6">
               <h3 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
@@ -48,15 +64,6 @@ export function Projects() {
                     {tag}
                   </span>
                 ))}
-              </div>
-              <div className="mt-6 border-t border-default pt-5">
-                <Link
-                  href={p.live}
-                  target="_blank"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"
-                >
-                  Visit <ArrowUpRight size={14} />
-                </Link>
               </div>
             </div>
           </motion.article>
