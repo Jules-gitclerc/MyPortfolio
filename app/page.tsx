@@ -9,6 +9,7 @@ import { Projects } from '@/components/projects';
 import { Extras } from '@/components/extras';
 import { Contact } from '@/components/contact';
 import { BackToTop } from '@/components/back-to-top';
+import { CursorFollower } from '@/components/ui/cursor-follower';
 import { Footer } from '@/components/footer';
 
 export default function Page() {
@@ -28,6 +29,7 @@ export default function Page() {
       </main>
       <Footer />
       <BackToTop />
+      <CursorFollower />
     </>
   );
 }

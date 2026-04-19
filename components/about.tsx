@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Section } from './ui/section';
+import { AnimatedCounter } from './ui/animated-counter';
 import { useI18n } from '@/app/providers';
 import { GitHubStats } from './github-stats';
 
@@ -68,7 +69,7 @@ export function About() {
               >
                 <span className="absolute inset-x-0 -top-px h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <dt className="font-display text-3xl font-semibold tracking-tight">
-                  <span className="text-gradient">{s.k}</span>
+                  <span className="text-gradient"><AnimatedCounter text={s.k} /></span>
                 </dt>
                 <dd className="mt-2 text-sm text-muted">{s.v}</dd>
               </motion.div>
