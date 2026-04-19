@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Star, GitFork, BookOpen } from 'lucide-react';
+import { Star, GitFork, BookOpen } from 'lucide-react';
+import { Github } from './ui/brand-icons';
 import { SOCIALS } from '@/lib/constants';
 
 type GitHubData = {

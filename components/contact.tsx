@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Linkedin, Github, Mail } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
+import { Linkedin, Github } from './ui/brand-icons';
 import { Section } from './ui/section';
 import { Magnetic } from './ui/magnetic';
 import { LinkButton } from './ui/button';

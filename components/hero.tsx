@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import { ArrowDown, Github, Linkedin, Codepen } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Codepen } from './ui/brand-icons';
 import { Aurora } from './ui/aurora';
 import { LinkButton } from './ui/button';
 import { Magnetic } from './ui/magnetic';
@@ -14,7 +15,7 @@ const lineVariants = {
   hidden: { y: '110%' },
   visible: (i: number) => ({
     y: 0,
-    transition: { duration: 0.9, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.9, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] as const },
   }),
 };
 
