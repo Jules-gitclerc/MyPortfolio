@@ -27,7 +27,7 @@ export function About() {
             <div className="absolute -inset-2 rounded-4xl bg-accent-grad opacity-40 blur-2xl" />
             <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-default/80 bg-surface">
               <Image
-                src="/picture-profile.png"
+                src="/picture-profile.webp"
                 alt="Jules Clerc"
                 fill
                 sizes="(max-width: 768px) 80vw, 400px"
