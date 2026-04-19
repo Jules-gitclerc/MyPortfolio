@@ -33,12 +33,12 @@ export function Work() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative overflow-hidden rounded-3xl border border-default bg-surface/60 p-8 backdrop-blur sm:p-12"
+            className="group relative overflow-hidden rounded-3xl border border-default bg-surface/60 p-8 backdrop-blur-sm sm:p-12"
           >
             {/* gradient border glow */}
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+              className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
             />
 
             <div className="relative grid gap-10 lg:grid-cols-12">

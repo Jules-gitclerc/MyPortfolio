@@ -31,7 +31,7 @@ export function Projects() {
           >
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+              className="pointer-events-none absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
             />
 
             <div className="flex flex-1 flex-col p-6">

@@ -75,7 +75,7 @@ export function Nav() {
               <Link
                 href={SOCIALS.resume}
                 target="_blank"
-                className="hidden items-center gap-1.5 rounded-full border border-default bg-surface/70 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur transition hover:border-accent/50 hover:text-accent md:inline-flex"
+                className="hidden items-center gap-1.5 rounded-full border border-default bg-surface/70 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-sm transition hover:border-accent/50 hover:text-accent md:inline-flex"
               >
                 <FileText size={14} />
                 {t('nav.resume')}
@@ -86,7 +86,7 @@ export function Nav() {
                 type="button"
                 aria-label="Menu"
                 onClick={() => setOpen(true)}
-                className="grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-default bg-surface/70 backdrop-blur md:hidden"
+                className="grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-default bg-surface/70 backdrop-blur-sm md:hidden"
               >
                 <Menu size={16} />
               </button>
@@ -102,7 +102,7 @@ export function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[60] md:hidden"
+            className="fixed inset-0 z-60 md:hidden"
           >
             <div className="absolute inset-0 bg-black/60 backdrop-blur-md" onClick={() => setOpen(false)} />
             <motion.div

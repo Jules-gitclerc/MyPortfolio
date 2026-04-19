@@ -21,10 +21,10 @@ export function Contact() {
 
   return (
     <Section id="contact">
-      <div className="relative overflow-hidden rounded-[2rem] border border-default bg-surface/60 p-10 backdrop-blur sm:p-16">
+      <div className="relative overflow-hidden rounded-4xl border border-default bg-surface/60 p-10 backdrop-blur-sm sm:p-16">
         {/* Aurora-ish accent */}
-        <div className="pointer-events-none absolute -top-40 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-accent/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-40 right-0 h-[24rem] w-[24rem] rounded-full bg-accent-hot/25 blur-3xl" />
+        <div className="pointer-events-none absolute -top-40 left-1/2 h-120 w-120 -translate-x-1/2 rounded-full bg-accent/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 right-0 h-96 w-[24rem] rounded-full bg-accent-hot/25 blur-3xl" />
 
         <div className="relative grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">

@@ -19,7 +19,7 @@ const variants: Record<Variant, string> = {
   primary:
     'group relative overflow-hidden bg-accent-grad text-white shadow-[0_10px_30px_-10px_rgb(var(--accent)/0.55)] hover:shadow-[0_18px_44px_-12px_rgb(var(--accent)/0.7)]',
   secondary:
-    'border border-default bg-surface/70 backdrop-blur hover:border-accent/50 hover:text-accent',
+    'border border-default bg-surface/70 backdrop-blur-sm hover:border-accent/50 hover:text-accent',
   ghost: 'hover:text-accent',
 };
 
@@ -49,7 +49,7 @@ export function LinkButton({
       {variant === 'primary' && (
         <span
           aria-hidden
-          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
         />
       )}
     </Link>
@@ -79,7 +79,7 @@ export function Button({
       {variant === 'primary' && (
         <span
           aria-hidden
-          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
         />
       )}
     </button>

@@ -30,12 +30,12 @@ export function Hero() {
     <section
       ref={ref}
       id="top"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 sm:pt-28"
+      className="relative flex min-h-svh items-center overflow-hidden pt-24 sm:pt-28"
     >
       <Aurora />
 
       {/* Subtle grid */}
-      <div className="pointer-events-none absolute inset-0 bg-grid-slate bg-[size:64px_64px] opacity-[0.15] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] dark:opacity-[0.08]" />
+      <div className="pointer-events-none absolute inset-0 bg-grid-slate bg-size-[64px_64px] opacity-[0.15] mask-[radial-gradient(ellipse_at_center,black,transparent_70%)] dark:opacity-[0.08]" />
 
       <motion.div style={{ y, opacity }} className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
         {/* Badge */}
@@ -43,7 +43,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full border border-default bg-surface/60 px-3 py-1.5 text-xs font-medium backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-default bg-surface/60 px-3 py-1.5 text-xs font-medium backdrop-blur-sm"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />

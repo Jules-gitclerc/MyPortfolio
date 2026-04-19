@@ -10,7 +10,7 @@ export function LangToggle() {
     <div
       role="group"
       aria-label="Language"
-      className="relative flex h-9 items-center rounded-full border border-default bg-surface/70 p-0.5 text-xs font-medium backdrop-blur"
+      className="relative flex h-9 items-center rounded-full border border-default bg-surface/70 p-0.5 text-xs font-medium backdrop-blur-sm"
     >
       <button
         type="button"

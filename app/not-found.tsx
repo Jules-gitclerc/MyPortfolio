@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 export default function NotFound() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-accent/20 blur-3xl" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-120 w-120 -translate-x-1/2 rounded-full bg-accent/20 blur-3xl" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

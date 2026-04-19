@@ -29,7 +29,7 @@ export function Extras() {
             {languages.map((lang) => (
               <li
                 key={lang.name}
-                className="flex items-center justify-between rounded-2xl border border-default bg-surface/50 px-5 py-4 backdrop-blur"
+                className="flex items-center justify-between rounded-2xl border border-default bg-surface/50 px-5 py-4 backdrop-blur-sm"
               >
                 <span className="font-display text-lg font-medium tracking-tight">{lang.name}</span>
                 <span className="text-sm text-muted">{lang.level}</span>
@@ -52,7 +52,7 @@ export function Extras() {
             {interests.map((interest) => (
               <span
                 key={interest}
-                className="rounded-full border border-default bg-surface/50 px-4 py-2.5 text-sm backdrop-blur transition hover:border-accent/40"
+                className="rounded-full border border-default bg-surface/50 px-4 py-2.5 text-sm backdrop-blur-sm transition hover:border-accent/40"
               >
                 {interest}
               </span>

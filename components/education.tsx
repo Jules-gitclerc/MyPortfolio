@@ -26,9 +26,9 @@ export function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative overflow-hidden rounded-2xl border border-default bg-surface/50 p-6 backdrop-blur"
+            className="group relative overflow-hidden rounded-2xl border border-default bg-surface/50 p-6 backdrop-blur-sm"
           >
-            <span className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <span className="pointer-events-none absolute inset-x-0 -top-px h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="flex items-center gap-3 text-sm text-muted">
               <GraduationCap size={16} className="text-accent" />
               {item.period}

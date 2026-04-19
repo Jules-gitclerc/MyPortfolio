@@ -60,7 +60,7 @@ export function GitHubStats() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="mt-10 overflow-hidden rounded-2xl border border-default bg-surface/50 p-5 backdrop-blur"
+      className="mt-10 overflow-hidden rounded-2xl border border-default bg-surface/50 p-5 backdrop-blur-sm"
     >
       <a
         href={SOCIALS.github}

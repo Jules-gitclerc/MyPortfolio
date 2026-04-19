@@ -54,10 +54,10 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
       style={{ rotateX: srx, rotateY: sry, transformPerspective: 1000 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-default bg-surface/60 p-8 backdrop-blur will-change-transform"
+      className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-default bg-surface/60 p-8 backdrop-blur-sm will-change-transform"
     >
       <motion.div style={{ background: bg }} aria-hidden className="pointer-events-none absolute inset-0" />
-      <span className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <span className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-accent/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       <div className="relative">
         <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-default bg-surface text-accent">
