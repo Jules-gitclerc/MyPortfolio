@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Section } from './ui/section';
 import { AnimatedCounter } from './ui/animated-counter';
 import { useI18n } from '@/app/providers';
+import { asset } from '@/lib/utils';
 import { GitHubStats } from './github-stats';
 
 type Stat = { k: string; v: string };
@@ -27,7 +28,7 @@ export function About() {
             <div className="absolute -inset-2 rounded-4xl bg-accent-grad opacity-40 blur-2xl" />
             <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-default/80 bg-surface">
               <Image
-                src="/picture-profile.webp"
+                src={asset("/picture-profile.webp")}
                 alt="Jules Clerc"
                 fill
                 sizes="(max-width: 768px) 80vw, 400px"

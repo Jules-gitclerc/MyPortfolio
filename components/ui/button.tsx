@@ -36,8 +36,9 @@ export function LinkButton({
   className,
   ...props
 }: LinkButtonProps) {
+  const rel = props.target === '_blank' ? 'noopener noreferrer' : undefined;
   return (
-    <Link className={cn(baseClass, variants[variant], className)} {...props}>
+    <Link className={cn(baseClass, variants[variant], className)} rel={rel} {...props}>
       {icon}
       <span>{children}</span>
       {showArrow && (

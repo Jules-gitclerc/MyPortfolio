@@ -76,6 +76,7 @@ export function Nav() {
               <Link
                 href={SOCIALS.resume}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 rounded-full border border-default bg-surface/70 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-sm transition hover:border-accent/50 hover:text-accent md:inline-flex"
               >
                 <FileText size={14} />
@@ -146,6 +147,7 @@ export function Nav() {
                 <Link
                   href={SOCIALS.resume}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-default px-4 py-2 text-sm"
                 >
                   <FileText size={14} />

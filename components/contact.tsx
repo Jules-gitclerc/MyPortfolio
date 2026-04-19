@@ -68,6 +68,7 @@ export function Contact() {
                   <Link
                     href={href}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center justify-between gap-4 rounded-2xl border border-default bg-surface px-5 py-4 transition hover:border-accent/40 hover:bg-surface/80"
                   >
                     <span className="flex items-center gap-3 font-display text-xl font-medium tracking-tight">

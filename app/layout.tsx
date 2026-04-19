@@ -6,6 +6,8 @@ import { Providers } from './providers';
 import { Noise } from '@/components/ui/noise';
 import { NAME, ROLE, SOCIALS } from '@/lib/constants';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -50,8 +52,8 @@ export const metadata: Metadata = {
   creator: NAME,
   icons: {
     icon: [
-      { url: '/icons8-portefeuille-32.png', sizes: '32x32' },
-      { url: '/icons8-portefeuille-96.png', sizes: '96x96' },
+      { url: `${basePath}/icons8-portefeuille-32.png`, sizes: '32x32' },
+      { url: `${basePath}/icons8-portefeuille-96.png`, sizes: '96x96' },
     ],
   },
   openGraph: {

@@ -148,6 +148,7 @@ export function Hero() {
                 key={label}
                 href={href}
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="cursor-pointer transition hover:text-accent"
               >

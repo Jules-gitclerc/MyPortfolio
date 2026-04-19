@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Section } from './ui/section';
 import { useI18n } from '@/app/providers';
+import { asset } from '@/lib/utils';
 import { EASE_OUT_EXPO } from '@/lib/motion';
 
 type Project = {
@@ -35,10 +36,11 @@ export function Projects() {
             <Link
               href={p.live}
               target="_blank"
+              rel="noopener noreferrer"
               className="relative aspect-[16/10] overflow-hidden"
             >
               <Image
-                src={p.image}
+                src={asset(p.image)}
                 alt={p.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
