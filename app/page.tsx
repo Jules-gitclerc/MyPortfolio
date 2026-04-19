@@ -10,6 +10,7 @@ import { Extras } from '@/components/extras';
 import { Contact } from '@/components/contact';
 import { BackToTop } from '@/components/back-to-top';
 import { CursorFollower } from '@/components/ui/cursor-follower';
+import { ScrollProgress } from '@/components/ui/scroll-progress';
 import { Footer } from '@/components/footer';
 
 export default function Page() {
@@ -30,6 +31,7 @@ export default function Page() {
       <Footer />
       <BackToTop />
       <CursorFollower />
+      <ScrollProgress />
     </>
   );
 }
