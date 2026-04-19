@@ -32,6 +32,7 @@ export function Nav() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
   }, [open]);
 
   return (

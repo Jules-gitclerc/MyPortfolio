@@ -108,8 +108,8 @@ export default function RootLayout({
       className={`${inter.variable} ${mono.variable} ${display.variable}`}
     >
       <head>
-        <Script
-          id="json-ld"
+        <link rel="preconnect" href="https://cdn.simpleicons.org" />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />

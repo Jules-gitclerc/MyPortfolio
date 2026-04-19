@@ -24,18 +24,17 @@ function TechIcon({ slug, color, name }: { slug: string | null; color: string; n
       width={22}
       height={22}
       loading="lazy"
+      decoding="async"
       className="shrink-0"
     />
   );
 }
 
-export function Stack() {
-  const { t } = useI18n();
-
-  const row = (
+function MarqueeRow({ prefix }: { prefix: string }) {
+  return (
     <div className="marquee-track flex shrink-0 items-center gap-14 px-7 animate-marquee">
       {techStack.map(({ name, slug, color }) => (
-        <div key={name} className="flex items-center gap-3">
+        <div key={`${prefix}-${name}`} className="flex items-center gap-3">
           <TechIcon slug={slug} color={color} name={name} />
           <span className="font-display text-2xl font-medium text-muted transition-colors hover:text-current sm:text-3xl">
             {name}
@@ -44,13 +43,17 @@ export function Stack() {
       ))}
     </div>
   );
+}
+
+export function Stack() {
+  const { t } = useI18n();
 
   return (
     <Section id="stack" kicker={t('stack.kicker')} title={t('stack.title')}>
       <div className="relative -mx-6 overflow-hidden mask-fade-x lg:-mx-8">
         <div className="flex w-max items-center">
-          {row}
-          {row}
+          <MarqueeRow prefix="a" />
+          <MarqueeRow prefix="b" />
         </div>
       </div>
     </Section>
